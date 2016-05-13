@@ -8,7 +8,7 @@ import codecs
 
 
 data=[]
-fileName="/Users/admin/Desktop/KBSApp/KBSApp/tutorial/tutorial/spiders/scrapedAppReviews/allReviews.txt"
+fileName="/Users/admin/Desktop/KBSApp/KBSApp/tutorial/tutorial/spiders/scrapedAppReviews/videoeditor.txt"
 with codecs.open(fileName,"r",encoding='utf-8') as f:
     for line in f:
         if line and line.strip():
@@ -39,7 +39,7 @@ for i in polarities:
 labeled_data = []
 for i in range(len(data)):
     content=data[i]+","+labels[i]+","+str(polarities[i])+"\n"
-    with codecs.open("/Users/admin/Desktop/KBSApp/KBSApp/tutorial/tutorial/spiders/scrapedAppReviews/allReviewSentiments.txt","a",encoding='utf-8') as out:
+    with codecs.open("/Users/admin/Desktop/KBSApp/KBSApp/tutorial/tutorial/spiders/scrapedAppReviews/videoSentiments.txt","a",encoding='utf-8') as out:
         out.write(content)
     
     out.close
